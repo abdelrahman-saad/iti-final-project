@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: SimonGame
+  name: simon-game
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: Simon-Game
+      app: simon-game
   template:
     metadata:
       labels:
-        app: Simon-Game
+        app: simon-game
     spec:
       containers:
       - name: Simon-Game
