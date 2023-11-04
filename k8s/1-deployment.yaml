@@ -13,7 +13,7 @@ spec:
         app: simon-game
     spec:
       containers:
-      - name: Simon-Game
+      - name: simon-game
         image: us-east1-docker.pkg.dev/iti-final-project-as/iti-project-final-as-repo/simon-app:latest
         ports:
         - containerPort: 80
