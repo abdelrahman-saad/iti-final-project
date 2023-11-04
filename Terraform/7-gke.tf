@@ -15,6 +15,10 @@ resource "google_container_cluster" "workload_cluster" {
           cidr_block = var.first_cider
           display_name = "vm"
       }
+      cidr_blocks {
+        cidr_block = "197.60.80.235/32"
+        display_name = "my local ip"
+      }
     }
 
   deletion_protection = false
