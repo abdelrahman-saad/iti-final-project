@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: SimonGame
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: Simon-Game
+  template:
+    metadata:
+      labels:
+        app: Simon-Game
+    spec:
+      containers:
+      - name: Simon-Game
+        image: us-east1-docker.pkg.dev/iti-final-project-as/iti-project-final-as-repo/simon-app:latest
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            cpu: 200m
+            memory: 256Mi
+          requests:
+            cpu: 100m
+            memory: 128Mi
