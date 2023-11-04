@@ -4,9 +4,9 @@ metadata:
   name: simon-app-service
 spec:
   selector:
-    app: Simon-Game   # Match the labels of your Deployment pods
+    app: simon-game   
   ports:
     - protocol: TCP
       port: 80
       targetPort: 80
-  type: LoadBalancer  # Exposes the Service externally using a load balancer
+  type: LoadBalancer  
